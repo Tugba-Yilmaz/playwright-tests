@@ -20,7 +20,7 @@ test.skip('Automatio Form Submissions',async({page})=>{
 
 
 })
-test.only('Handling Form',async ({page})=>{
+test('Handling Form',async ({page})=>{
 
     await page.goto('http://demo.playwright.dev/todomvc');
     const placeholder = '[placeholder="What needs to be done?"]';
