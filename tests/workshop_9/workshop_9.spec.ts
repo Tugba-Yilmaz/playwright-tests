@@ -1,7 +1,7 @@
 import {test ,expect} from '@playwright/test';
 import { channel } from 'diagnostics_channel';
 
-test.only('Automating Form Submissions @githubAction',async({page})=>{
+test('Automating Form Submissions @githubAction',async({page})=>{
     await page.goto('https://demo.playwright.dev/todomvc/')
 
     const newTodo = await page.getByPlaceholder('What needs to be done?')
