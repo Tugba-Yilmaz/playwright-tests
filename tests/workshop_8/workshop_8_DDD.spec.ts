@@ -13,7 +13,7 @@ test.describe('Sample Test', ()=>{
 
     for(const data of Object.values(testData)){
         if(data.testName === "Test 1 - Fill input" || data.testName === "Test 1 -Negative Test"){
-            test.only(data.testName, async()=>{
+            test(data.testName, async()=>{
                 await pageObject.fillFirstName(data.firstName)
                 await pageObject.fillAge(data.age)
                 if(data.isStudent){

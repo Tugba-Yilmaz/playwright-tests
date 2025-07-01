@@ -15,7 +15,7 @@ test.describe('User Registration Tests',()=>{
 
     })
    
-    test.only('Register with valid data',async({page})=>{
+    test('Register with valid data',async({page})=>{
     
 
         await page.fill('#firstName', testData.firstName);
@@ -37,7 +37,7 @@ test.describe('User Registration Tests',()=>{
 
     });
 
-    test.only('Register with empty fields',async({page})=>{
+    test('Register with empty fields',async({page})=>{
         await page.fill('#firstName', testData.firstName);
         await page.fill('#lastName', testData.lastName);
         await page.click('#register');
@@ -45,7 +45,7 @@ test.describe('User Registration Tests',()=>{
         expect(error).toBe('Please fill in all fields.')
     })
 
-    test.only('Register with all empty fields',async ({page})=>{
+    test('Register with all empty fields',async ({page})=>{
         await page.click('#register');
         const error = await page.locator('#error p').textContent()
         expect(error).toBe('Please fill in all fields.')

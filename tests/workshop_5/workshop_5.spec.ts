@@ -20,7 +20,7 @@ test.skip("Add Cookie",async ({page})=>{
     await expect(sessionCookie).toBeDefined();
 })
 
-test.only('Delete cookies',async ({page})=>{
+test('Delete cookies',async ({page})=>{
     await page.goto('file:///C:/Users/tuslu/OneDrive/Masa%C3%BCst%C3%BC/playwrightCourse/tests/workshop_5/index.html');
     await page.click('#setCookie');
     const cookies = await page.context().cookies('file:///C:/Users/tuslu/OneDrive/Masa%C3%BCst%C3%BC/playwrightCourse/tests/workshop_5/index.html');

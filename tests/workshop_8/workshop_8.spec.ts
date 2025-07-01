@@ -10,7 +10,7 @@ test.describe('Sample Test', ()=>{
         await pageObject.open('file:///C:/Users/tuslu/OneDrive/Masa%C3%BCst%C3%BC/playwrightCourse/tests/workshop_8/index.html')
     })
 
-    test.only('Test 1: Fill all inputs',async({page})=>{
+    test('Test 1: Fill all inputs',async({page})=>{
         await pageObject.fillFirstName('John');
         await pageObject.fillAge('23');
         await pageObject.checkISStudent();
